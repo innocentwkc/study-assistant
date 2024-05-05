@@ -12,25 +12,60 @@
       </h2>
     </div>
     <div class="mb-4">
-      <!-- <div ref="editableTime" contenteditable="true" class="text-6xl mb-4" @blur="updateCustomTime">{{ formattedTime }}</div> -->
-      <!-- Custom time input fields -->
-      <input type="number" v-model="customHours" min="0" placeholder="Custom hours" class="p-2 border rounded mx-2">
-      <input type="number" v-model="customMinutes" min="0" max="59" placeholder="Custom minutes"
-        class="p-2 border rounded mx-2">
-      <input type="number" v-model="customSeconds" min="0" max="59" placeholder="Custom seconds"
-        class="p-2 border rounded mx-2">
-      <button @click="setCustomTime" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Set Custom
-        Time</button>
+    <cv-grid :full-width="fullWidth" :kind="kind">
+      <cv-row kind="narrow">
+        <cv-column>
+          <cv-number-input label="Number of hours" min="0" placeholder="Custom hours" v-model="customHours" />
+        </cv-column>
+        <cv-column>
+          <cv-number-input label="Minutes" min="0" max="59" v-model="customMinutes" />
+        </cv-column>
+        <cv-column>
+          <cv-number-input label="Seconds" min="0" max="59" v-model="customSeconds" />
+        </cv-column>
+        <cv-column>
+          <cv-button 
+            @click="setCustomTime"
+            :disabled="isRunning"
+            :icon="UpdateNow">
+            Update Timer
+          </cv-button>
+        </cv-column>
+      </cv-row>
+    </cv-grid>
     </div>
     <!-- Display the formatted time -->
     <!-- Timer control buttons -->
-    <div class="mb-4">
-      <button @click="startTimer" :disabled="isRunning"
-        class="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-700">Start</button>
-      <button @click="stopTimer" :disabled="!isRunning"
-        class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-700">Stop</button>
-      <button @click="resetTimer" class="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-700">Reset</button>
-    </div>
+    <cv-grid>
+      <cv-row>
+        <cv-button-set >
+          <cv-button 
+            @click="startTimer"
+            :disabled="isRunning"
+            :icon="Play">
+              Start
+            </cv-button>
+          <cv-button
+            @click="stopTimer"
+            kind="tertiary"
+            :disabled="!isRunning"
+            :icon="Pause">
+            PAUSE
+          </cv-button>
+          <cv-button
+            @click="stopTimer"
+            kind="danger"
+            :disabled="!isRunning"
+            :icon="Stop">
+            STOP
+          </cv-button>
+          <cv-button
+            @click="resetTimer"
+            kind="secondary"
+            :icon="Reset">RESET</cv-button>
+        </cv-button-set>
+      </cv-row>
+    </cv-grid>
 
     <!-- Lap counter, Question Tracker and button -->
     <div class="mt-4">
@@ -79,13 +114,18 @@
 
 import { ref, onMounted, computed } from 'vue';
 import Notification from '@/components/Notification.vue';
+import Play from "@carbon/icons-vue/es/play/32";
+import Pause from "@carbon/icons-vue/es/pause/32";
+import Stop from "@carbon/icons-vue/es/stop/32";
+import Reset from "@carbon/icons-vue/es/reset/32";
+import UpdateNow from "@carbon/icons-vue/es/update-now/32";
 
 
 const time = ref(0); // The current time in seconds.
 const customHours = ref(0); // The custom hours set by the user.
 const customMinutes = ref(6); // The custom minutes set by the user.
 const customSeconds = ref(0); // The custom seconds set by the user.
-const isRunning = ref(false); // Flag to indicate whether the timer is running.
+const isRunning = ref(false); // Flag to indicate whether the timer is running. //TODO: watch and change Play to Continue
 const showAlertModal = ref(false)
 // Interval used for updating the timer
 let interval; 
