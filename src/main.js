@@ -1,13 +1,18 @@
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-import { router } from './router';
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import CarbonComponents from "@carbon/vue";
 
-import './style.css';
-import App from './App.vue';
+import "./style.css";
+import "carbon-components/css/carbon-components.css";
+import "@carbon/web-components/es/components/ui-shell/index.js";
 
-const store = createPinia();
+import router from "./router";
+import App from "./App.vue";
 
-createApp(App)
+// const store = createPinia();
+const app = createApp(App);
+
+app.use(createPinia())
   .use(router)
-  .use(store)
-  .mount('#app');
+  .use(CarbonComponents)
+  .mount("#app");

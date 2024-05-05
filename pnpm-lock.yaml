@@ -17,6 +17,9 @@ importers:
       '@carbon/vue':
         specifier: ^3.0.15
         version: 3.0.15(vue@3.4.26)
+      '@carbon/web-components':
+        specifier: ^2.8.0
+        version: 2.8.0(@carbon/grid@11.22.0)(@carbon/layout@11.21.0)(@carbon/motion@11.17.0)(@carbon/themes@11.34.0)(@carbon/type@11.26.0)(sass@1.76.0)
       carbon-components:
         specifier: ^10.58.12
         version: 10.58.12
@@ -270,6 +273,15 @@ packages:
   '@carbon/grid@11.22.0':
     resolution: {integrity: sha512-b5R4LMRatZ0ZmRh+outCkPIFIF+gvM3sPjC0NAuAc2CQ6lAZP07/m5f8TOX9YAo10kE1j63hU+unEzs6lAHPRA==}
 
+  '@carbon/ibm-products-styles@2.34.0':
+    resolution: {integrity: sha512-GkW2SXLAmzWSO7bGyZOmVl4069l2Vh1pXIYvb5yshGTUzF6GLcjHrGSMfs6/6Rj0vFtpVCIbRzb8ymnNtyRegA==}
+    peerDependencies:
+      '@carbon/grid': ^11.22.0
+      '@carbon/layout': ^11.21.0
+      '@carbon/motion': ^11.17.0
+      '@carbon/themes': ^11.34.0
+      '@carbon/type': ^11.26.0
+
   '@carbon/icon-helpers@10.47.0':
     resolution: {integrity: sha512-vv2Wkuw7lYkYVKrn5ABzlZD+6ioAYwMuyKi2XPqYY3hrHYoL4CQUnuSFDhlj0DR2HHCB0L5MGRLxHLucx5cc7g==}
 
@@ -281,6 +293,14 @@ packages:
 
   '@carbon/motion@11.17.0':
     resolution: {integrity: sha512-/EXBzFU5hbVxO7yqf/VREesjy8Z6GxhfXjV9etBtj84Z4H460e0CN1z+5KDLpKyq6zVmRnLlFmxVmZgyHwMTfA==}
+
+  '@carbon/styles@1.54.0':
+    resolution: {integrity: sha512-VXcx+o6q2ol2kcm3cfE8PaV2+EgbwVaSlZ9gH6VYorBN2MT4I9xypQAYzoyrNN0oV/Q92Xiyb3WejKuy74xFEg==}
+    peerDependencies:
+      sass: ^1.33.0
+    peerDependenciesMeta:
+      sass:
+        optional: true
 
   '@carbon/styles@1.56.0':
     resolution: {integrity: sha512-NE6A0YasZoHsGwdhzN3/8qsVl7pQHy6qMxjGyGH1MIfJV96ZwR5/3hQSVyWrom+bHsZBUPMgBemImZSX/cdqew==}
@@ -305,6 +325,9 @@ packages:
 
   '@carbon/vue@3.0.15':
     resolution: {integrity: sha512-BMMUKfzgbH8DHJqr1qntZ228tMDpcDGHDcPRruie5vGOQSEH4pSkHW2D98ygaguRTfZ9YpPSvWNn3f9Hj6V8jg==}
+
+  '@carbon/web-components@2.8.0':
+    resolution: {integrity: sha512-ochHtByqb45afhLJmGUostC/fUjd4oheD3emUiYFnnWxTs5wCIr2+Ft7YXfbvSC6SLp4h1ewESSn8aRYUNcZ/w==}
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -455,6 +478,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@floating-ui/core@1.6.1':
+    resolution: {integrity: sha512-42UH54oPZHPdRHdw6BgoBD6cg/eVTmVrFcgeRDM3jbO7uxSoipVcmcIGFcA5jmOHO5apcyvBhkSKES3fQJnu7A==}
+
+  '@floating-ui/dom@1.6.5':
+    resolution: {integrity: sha512-Nsdud2X65Dz+1RHjAIP0t8z5e2ff/IRbei6BqFrl1urT8sDVzM1HMQ+R0XcU5ceRfyO3I6ayeqIfh+6Wb8LGTw==}
+
+  '@floating-ui/utils@0.2.2':
+    resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
+
   '@hapi/hoek@9.3.0':
     resolution: {integrity: sha512-/c6rf4UJlmHlC9b5BaNvzAcFv7HZ2QHaV0D4/HNlBdvFnvQq8RI4kYdhyPCl7Xj+oWvTWQ8ujhqS53LIgAe6KQ==}
 
@@ -494,6 +526,12 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@lit-labs/ssr-dom-shim@1.2.0':
+    resolution: {integrity: sha512-yWJKmpGE6lUURKAaIltoPIE/wrbY3TEkqQt+X0m+7fQNnAv0keydnYvbiJFP1PnMhizmIWRWOG5KLhYyc/xl+g==}
+
+  '@lit/reactive-element@1.6.3':
+    resolution: {integrity: sha512-QuTgnG52Poic7uM1AN5yJ09QMe0O28e10XzSvWDz02TJiiKee4stsiownEIadWm8nYzyDAyT+gKzUoZmiWQtsQ==}
 
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
@@ -617,6 +655,9 @@ packages:
 
   '@types/sizzle@2.3.8':
     resolution: {integrity: sha512-0vWLNK2D5MT9dg0iOo8GlKguPAU02QjmZitPEsXRuJXU/OGIOt9vT9Fc26wtYuavLxtO45v9PGleoL9Z0k1LHg==}
+
+  '@types/trusted-types@2.0.7':
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
 
   '@types/yauzl@2.10.3':
     resolution: {integrity: sha512-oJoftv0LSuaDZE3Le4DbKX+KS9G36NzOeSap90UIK0yMA/NhKJhqlSGtNDORNRaIbQfzjXDrQa0ytJ6mNRGz/Q==}
@@ -1653,6 +1694,15 @@ packages:
       enquirer:
         optional: true
 
+  lit-element@3.3.3:
+    resolution: {integrity: sha512-XbeRxmTHubXENkV4h8RIPyr8lXc+Ff28rkcQzw3G6up2xg5E8Zu1IgOWIwBLEQsu3cOVFqdYwiVi0hv0SlpqUA==}
+
+  lit-html@2.8.0:
+    resolution: {integrity: sha512-o9t+MQM3P4y7M7yNzqAyjp7z+mQGa4NS4CxiyLqFPyFWyc4O+nodLrkrxSaCTrla6M5YOLaT3RpbbqjszB5g3Q==}
+
+  lit@2.8.0:
+    resolution: {integrity: sha512-4Sc3OFX9QHOJaHbmTMk28SYgVxLN3ePDjg7hofEft2zWlehFL3LiAuapWc4U/kYwMYJSh2hTCPZ6/LIC7ii0MA==}
+
   local-pkg@0.5.0:
     resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
     engines: {node: '>=14'}
@@ -2660,6 +2710,15 @@ snapshots:
       '@carbon/layout': 11.21.0
       '@ibm/telemetry-js': 1.5.0
 
+  '@carbon/ibm-products-styles@2.34.0(@carbon/grid@11.22.0)(@carbon/layout@11.21.0)(@carbon/motion@11.17.0)(@carbon/themes@11.34.0)(@carbon/type@11.26.0)':
+    dependencies:
+      '@carbon/grid': 11.22.0
+      '@carbon/layout': 11.21.0
+      '@carbon/motion': 11.17.0
+      '@carbon/themes': 11.34.0
+      '@carbon/type': 11.26.0
+      '@ibm/telemetry-js': 1.5.0
+
   '@carbon/icon-helpers@10.47.0':
     dependencies:
       '@ibm/telemetry-js': 1.5.0
@@ -2675,6 +2734,20 @@ snapshots:
   '@carbon/motion@11.17.0':
     dependencies:
       '@ibm/telemetry-js': 1.5.0
+
+  '@carbon/styles@1.54.0(sass@1.76.0)':
+    dependencies:
+      '@carbon/colors': 11.21.0
+      '@carbon/feature-flags': 0.19.0
+      '@carbon/grid': 11.22.0
+      '@carbon/layout': 11.21.0
+      '@carbon/motion': 11.17.0
+      '@carbon/themes': 11.34.0
+      '@carbon/type': 11.26.0
+      '@ibm/plex': 6.0.0-next.6
+      '@ibm/telemetry-js': 1.5.0
+    optionalDependencies:
+      sass: 1.76.0
 
   '@carbon/styles@1.56.0(sass@1.76.0)':
     dependencies:
@@ -2722,6 +2795,24 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+
+  '@carbon/web-components@2.8.0(@carbon/grid@11.22.0)(@carbon/layout@11.21.0)(@carbon/motion@11.17.0)(@carbon/themes@11.34.0)(@carbon/type@11.26.0)(sass@1.76.0)':
+    dependencies:
+      '@babel/runtime': 7.24.5
+      '@carbon/ibm-products-styles': 2.34.0(@carbon/grid@11.22.0)(@carbon/layout@11.21.0)(@carbon/motion@11.17.0)(@carbon/themes@11.34.0)(@carbon/type@11.26.0)
+      '@carbon/styles': 1.54.0(sass@1.76.0)
+      '@floating-ui/dom': 1.6.5
+      '@ibm/telemetry-js': 1.5.0
+      flatpickr: 4.6.13
+      lit: 2.8.0
+      lodash-es: 4.17.21
+    transitivePeerDependencies:
+      - '@carbon/grid'
+      - '@carbon/layout'
+      - '@carbon/motion'
+      - '@carbon/themes'
+      - '@carbon/type'
+      - sass
 
   '@colors/colors@1.5.0':
     optional: true
@@ -2823,6 +2914,17 @@ snapshots:
   '@esbuild/win32-x64@0.20.2':
     optional: true
 
+  '@floating-ui/core@1.6.1':
+    dependencies:
+      '@floating-ui/utils': 0.2.2
+
+  '@floating-ui/dom@1.6.5':
+    dependencies:
+      '@floating-ui/core': 1.6.1
+      '@floating-ui/utils': 0.2.2
+
+  '@floating-ui/utils@0.2.2': {}
+
   '@hapi/hoek@9.3.0': {}
 
   '@hapi/topo@5.1.0':
@@ -2862,6 +2964,12 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  '@lit-labs/ssr-dom-shim@1.2.0': {}
+
+  '@lit/reactive-element@1.6.3':
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.0
 
   '@one-ini/wasm@0.1.1': {}
 
@@ -2946,6 +3054,8 @@ snapshots:
   '@types/sinonjs__fake-timers@8.1.1': {}
 
   '@types/sizzle@2.3.8': {}
+
+  '@types/trusted-types@2.0.7': {}
 
   '@types/yauzl@2.10.3':
     dependencies:
@@ -4128,6 +4238,22 @@ snapshots:
       wrap-ansi: 7.0.0
     optionalDependencies:
       enquirer: 2.4.1
+
+  lit-element@3.3.3:
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.0
+      '@lit/reactive-element': 1.6.3
+      lit-html: 2.8.0
+
+  lit-html@2.8.0:
+    dependencies:
+      '@types/trusted-types': 2.0.7
+
+  lit@2.8.0:
+    dependencies:
+      '@lit/reactive-element': 1.6.3
+      lit-element: 3.3.3
+      lit-html: 2.8.0
 
   local-pkg@0.5.0:
     dependencies:
