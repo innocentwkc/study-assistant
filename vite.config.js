@@ -12,7 +12,14 @@ export default defineConfig({
   build: {
     outDir: "dist", // Specify the output directory
   },
-  plugins: [vue(), VueDevTools()],
+  plugins: [
+    vue({
+      compilerOptions: {
+        isCustomElement: (tag) => tag.startsWith("cds-") // catch custon carbon web components
+      },
+    }),
+    VueDevTools(),
+  ],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
