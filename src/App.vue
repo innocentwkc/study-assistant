@@ -1,7 +1,6 @@
 <template>
   <Navigation />
   <RouterView />
-  
 </template>
 
 <script setup>

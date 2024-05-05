@@ -1,10 +1,10 @@
 <template>
   <div>
-    <cds-header aria-label="IBM Platform Name">
+    <cds-header aria-label="Study Assistant">
       <cds-header-menu-button
         button-label-active="Close menu"
         button-label-inactive="Open menu"></cds-header-menu-button>
-      <cds-header-name href="javascript:void 0" prefix="IBM"
+      <cds-header-name href="javascript:void 0" prefix="STUDY ASSISTANT"
         >[Platform]</cds-header-name
       >
       <cds-header-nav menu-bar-label="IBM [Platform]">
@@ -27,22 +27,16 @@
     <cds-side-nav aria-label="Side navigation" expanded>
       <cds-side-nav-items>
         <cds-side-nav-menu title="Tools">
-          <router-link active aria-current="page" class="" to="/pomodoro">
+          <router-link Class="" to="/pomodoro">
             Pomodoro
           </router-link>
           <router-link class="" to="/about">
-            About
+            Calendar
           </router-link>
-          <cds-side-nav-menu-item  href="www.ibm.com">
-            L0 menu item
-          </cds-side-nav-menu-item>
-          <cds-side-nav-menu-item href="www.ibm.com">
-            L0 menu item
-          </cds-side-nav-menu-item>
         </cds-side-nav-menu>
-        <!-- <cds-side-nav-divider></cds-side-nav-divider> -->
-        <cds-side-nav-link href="javascript:void(0)">L0 link</cds-side-nav-link>
-        <cds-side-nav-link href="javascript:void(0)">L0 link</cds-side-nav-link>
+        
+        <cds-side-nav-link href="/about">About</cds-side-nav-link>
+        <cds-side-nav-link href="javascript:void(0)">Lorem</cds-side-nav-link>
       </cds-side-nav-items>
     </cds-side-nav>
   </div>
