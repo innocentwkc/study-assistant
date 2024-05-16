@@ -1,28 +1,28 @@
-# Converts txt files to json format 
-
 import json
 import re
+
 
 def parse_text_file(file_path):
     with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
         content = file.read()
 
+    # Split the content into questions using a regular expression
     questions = re.split(r'(Question #\d+)', content)
     questions = [q.strip() for q in questions if q.strip()]
 
     parsed_questions = []
 
-    for i in range(0, len(questions), 2):
+    for i in range(1, len(questions), 2):
         question_data = {}
 
         # Extract question number
-        question_number_match = re.search(r'Question #(\d+)', questions[i])
+        question_number_match = re.search(r'Question #(\d+)', questions[i-1])
         if question_number_match:
             question_number = question_number_match.group(1)
             question_data['question_number'] = question_number
 
         # Combine question number and content
-        question = questions[i] + " " + questions[i+1]
+        question = questions[i-1] + " " + questions[i]
 
         # Extract topic
         topic_match = re.search(r'Topic (\d+)', question)
@@ -71,8 +71,8 @@ def save_to_json(data, output_file):
 
 if __name__ == "__main__":
     # input_file = '1-100_OCR.txt'  # Replace with your file path
-    input_file = 'data/text-files/devnet/100-200_OCR.txt'  # Replace with your file path
-    output_file = 'data/question-files/devnet/100-200.json'
+    input_file = 'data/text-files/devnet/200-383_OCR.txt'  # Replace with your file path
+    output_file = 'data/question-files/devnet/100-200_test2.json'
 
     parsed_data = parse_text_file(input_file)
     save_to_json(parsed_data, output_file)
